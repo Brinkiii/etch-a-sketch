@@ -13,7 +13,11 @@ for (let i = 0; i < gridNumber; i++) {
         row.appendChild(gridDiv);
 
         gridDiv.addEventListener("mouseover", () => {
-            gridDiv.classList.add("filled")
+            if (gridDiv.classList.contains("filled")) {
+                gridDiv.classList.remove("filled")
+            } else {
+                gridDiv.classList.add("filled")
+            }
         })
     }
 }
